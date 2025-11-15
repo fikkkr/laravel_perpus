@@ -76,7 +76,7 @@ class BukuController extends Controller
             ]
             );
         $buku = Buku::findorfail($id);
-        $buku = update($validated);
+        $buku -> update($validated);
         return response()->json([
             'message' => 'data berhasil di update',
             'data' => $buku
